@@ -7,7 +7,7 @@ const Banner = () => {
             Sale 20% off all store
           </p>
           <h2 className="text-topHeadingPrimary font-bold text-xl sm:text-3xl max-w-[240px]">
-            DISCON SUPERRRRR
+            DISCON Bombastis
           </h2>
           <a
             className="inline-block mt-6 hover:text-accent text-topHeadingSecondary font-medium"

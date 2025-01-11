@@ -2,7 +2,6 @@
 import Popup from "@/components/admin-panel/Popup";
 import ProductRow from "@/components/admin-panel/ProductRow";
 import { setLoading } from "@/redux/features/loadingSlice";
-import { setProduct } from "@/redux/features/productSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -25,13 +24,13 @@ const Dashboard = () => {
 
   useEffect(() => {
     dispatch(setLoading(true));
-
+  
     axios
       .get("/api/get_products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err))
       .finally(() => dispatch(setLoading(false)));
-  }, [updateTable]);
+  }, [dispatch, updateTable]);
 
   return (
     <div>
